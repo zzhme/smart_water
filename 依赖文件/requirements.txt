@@ -1,0 +1,15 @@
+# 核心依赖
+numpy==1.23.5
+pymodbus==3.0.0
+requests==2.28.1
+tensorrt==8.5.1.7
+pycuda==2022.1
+flask==2.2.2
+sqlalchemy==1.4.41
+python-dotenv==0.21.0
+
+# 测试依赖
+pytest==7.4.0
+pytest-mock==3.11.1
+requests-mock==1.11.0
+faker==18.11.2

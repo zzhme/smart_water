@@ -1,0 +1,24 @@
+# 传感器配置
+modbus_sensors:
+  water_level_01:
+    protocol: modbus
+    host: 192.168.1.100
+    port: 502
+    timeout: 5
+    register_map:
+      water_level:
+        address: 0x01
+        count: 2
+        scale: 0.1
+
+http_sensors:
+  flow_rate_01:
+    protocol: http
+    endpoint: "http://api.hydro.com/sensor/001"
+    timeout: 3
+
+model_config:
+  anomaly_model_path: "models/bilstm_v2.trt"
+  threshold:
+    window_size: 100
+    quantile: 0.98
